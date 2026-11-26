@@ -296,3 +296,45 @@ h2 {
 .contact-list a:hover { border-color: var(--accent); }
 .contact-list a span { color: var(--soft); font-size: .875rem; }
 main:has(.contacts) + .footer { border-top: 1px solid var(--line); }
+
+
+.merch-project {
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+  background: #1b1a1a;
+}
+.merch-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .65rem 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.merch-heading h2 { margin: 0; }
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.9rem, 2.25vw, 2rem);
+  margin-top: 1.45rem;
+}
+.merch-card { margin: 0; min-width: 0; }
+.merch-card a { display: block; }
+.merch-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  background: #c9c3b9;
+}
+.merch-card a:hover img { border-color: var(--accent); }
+.merch-card figcaption {
+  padding: .85rem 0 .7rem;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(1.18rem, 2vw, 1.65rem);
+  font-weight: 750;
+}
+@media (max-width: 650px) {
+  .merch-grid { grid-template-columns: minmax(0, 1fr); }
+}
