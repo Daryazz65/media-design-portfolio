@@ -87,7 +87,7 @@ h1 span { color: var(--accent); }
   padding-block: clamp(1.4rem, 3vw, 2.6rem) clamp(1.8rem, 4vw, 3.5rem);
 }
 .art { margin: 0; }
-.art img, .room-layout img {
+.art img {
   aspect-ratio: 16 / 9;
   display: block;
   width: 100%;
@@ -304,35 +304,4 @@ main:has(.contacts) + .footer { border-top: 1px solid var(--line); }
   .merch-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
-.stream-project { background: #181722; --accent: #ffad69; }
-.room-project { background: #1c1924; --accent: #d7a4eb; }
-.stream-project, .room-project { padding-bottom: clamp(2.2rem, 5vw, 4rem); }
-.stream-embed {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border: 1px solid var(--line);
-  background: var(--ink);
-}
-.open-project {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: .5rem .85rem;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  font-weight: 650;
-}
-.open-project:hover { background: var(--accent); color: var(--ink); }
-.stream-embed + .open-project { margin-top: 1rem; }
-.room-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 3.5vw, 3rem);
-  align-items: start;
-}
-@media (max-width: 900px) {
-  .room-layout { grid-template-columns: minmax(0, 1fr); }
-}
 .project-title + .project-grid { padding-block-start: 0; }
