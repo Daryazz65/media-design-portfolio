@@ -280,3 +280,25 @@ h2 {
   .mockup-grid { grid-template-columns: minmax(0, 1fr); }
   .mockup-phone { max-width: min(100%, 375px); justify-self: center; }
 }
+
+
+.contacts { padding-block: clamp(2.2rem, 5vw, 4rem); }
+.contacts h2 { margin: 0 0 1.1rem; }
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contact-list a {
+  display: grid;
+  gap: .35rem;
+  padding: .9rem 1rem;
+  border: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.contact-list a:hover { border-color: var(--accent); }
+.contact-list a span { color: var(--soft); font-size: .875rem; }
+main:has(.contacts) + .footer { border-top: 1px solid var(--line); }
