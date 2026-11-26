@@ -219,7 +219,7 @@ h2 {
 .banner-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 2560 / 423;
+  aspect-ratio: 963 / 155;
   overflow: hidden;
 }
 .banner-frame img {
@@ -233,9 +233,9 @@ h2 {
 }
 #view-mobile:checked ~ .banner-stage .banner-frame {
   width: min(100%, 33rem);
-  aspect-ratio: 1544 / 423;
+  aspect-ratio: 343 / 55.3;
 }
-#view-mobile:checked ~ .banner-stage img { width: 165.803%; }
+#view-mobile:checked ~ .banner-stage img { width: 149.254%; top: 50.5%; }
 #view-full:checked ~ .banner-stage .banner-frame { aspect-ratio: 16 / 9; }
 .channel-assets {
   display: flex;
@@ -265,4 +265,33 @@ h2 {
 }
 @media (max-width: 480px) {
   .channel-downloads .download { font-size: .875rem; }
+}
+
+
+.channel-mockups { margin-top: clamp(2rem, 5vw, 3.75rem); }
+.channel-mockups h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.2;
+}
+.mockup-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3.25fr) minmax(0, 1fr);
+  gap: clamp(1rem, 2vw, 1.6rem);
+  align-items: start;
+}
+.mockup-grid figure { margin: 0; min-width: 0; }
+.mockup-grid a { display: block; }
+.mockup-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: .4rem;
+}
+.mockup-grid a:hover img { border-color: var(--accent); }
+.mockup-grid figcaption { margin-top: .65rem; color: var(--soft); font-size: .875rem; }
+@media (max-width: 720px) {
+  .mockup-grid { grid-template-columns: minmax(0, 1fr); }
+  .mockup-phone { max-width: min(100%, 375px); justify-self: center; }
 }
