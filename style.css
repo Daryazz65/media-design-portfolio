@@ -32,6 +32,15 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 }
 .mast { border-bottom: 1px solid var(--line); }
 .identity { display: inline-flex; align-items: center; gap: .65rem; font-weight: 700; }
+.mast-contact {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: .4rem .8rem;
+  border: 1px solid var(--line);
+  font-weight: 650;
+}
+.mast-contact:hover { border-color: var(--accent); }
 .intro { padding-block: clamp(2.8rem, 7vw, 6.25rem); }
 .eyebrow {
   margin: 0;
