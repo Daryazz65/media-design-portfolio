@@ -260,6 +260,7 @@ h2 {
 }
 .mockup-grid a:hover img { border-color: var(--accent); }
 .mockup-grid figcaption { margin-top: .65rem; color: var(--soft); font-size: .875rem; }
+.channel-caption { margin: 1.6rem 0 0; color: var(--soft); font-size: 1rem; }
 @media (max-width: 720px) {
   .mockup-grid { grid-template-columns: minmax(0, 1fr); }
   .mockup-phone { max-width: min(100%, 375px); justify-self: center; }
