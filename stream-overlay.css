@@ -1,0 +1,70 @@
+:root { color-scheme: dark; font-family: "Segoe UI", Arial, sans-serif; }
+*, *::before, *::after { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; }
+body { display: grid; place-items: center; background: #0c0b10; }
+.scene {
+  position: relative;
+  width: min(100vw, 177.778vh);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  isolation: isolate;
+  container-type: inline-size;
+  background: #121018 url("./stream-scene.jpg") center / cover;
+  color: #fff5e6;
+}
+.scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #0e0b17a8 0%, #0e0b1740 35%, transparent 61%);
+}
+canvas { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; }
+.copy { position: absolute; top: 18%; left: 6.4%; width: 36%; }
+.on-air {
+  display: flex;
+  align-items: center;
+  gap: .65em;
+  color: #ffd39e;
+  font: 700 clamp(.55rem, 1.6cqw, 1.28rem)/1.2 Consolas, monospace;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.on-air::before { content: ""; inline-size: .56em; block-size: .56em; border-radius: 50%; background: #ff9b58; box-shadow: 0 0 .8em #f55c34; }
+h1 { margin: .08em 0 .12em; font-size: 8.2cqw; font-weight: 800; line-height: .95; letter-spacing: -.08em; white-space: nowrap; }
+.subtitle {
+  display: inline-block;
+  min-block-size: 2.7em;
+  margin: .48em 0 0;
+  padding: .35em .6em;
+  border-inline-start: 2px solid #ffad69;
+  color: #f5eee7;
+  background: #120e17d9;
+  font: 500 clamp(.55rem, 1.95cqw, 1.55rem)/1.25 "Segoe UI", sans-serif;
+}
+.controls {
+  position: absolute;
+  left: 6.4%;
+  bottom: 6%;
+  display: flex;
+  gap: clamp(.25rem, .7cqw, .65rem);
+}
+button {
+  border: 1px solid #cbaa91a0;
+  border-radius: 4px;
+  padding: .4em .72em;
+  color: #fff5e6;
+  background: #171125f2;
+  cursor: pointer;
+  font: 650 clamp(.75rem, 1.45cqw, 1rem)/1.25 "Segoe UI", sans-serif;
+}
+button[data-action="next"], button[aria-pressed="true"] { border-color: #ffad69; }
+button[data-action="next"] { background: #ffd1a1; color: #1e1423; }
+button:hover { border-color: #fff5e6; }
+button:focus-visible { outline: 2px solid #fff5e6; outline-offset: 2px; }
+.obs-mode .controls { display: none; }
+@container (max-width: 440px) {
+  .copy { top: 14%; width: 45%; }
+  .subtitle { font-size: clamp(.58rem, 2.35cqw, .72rem); }
+  .controls { bottom: 4%; }
+}
